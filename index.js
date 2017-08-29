@@ -52,15 +52,13 @@ function total() {
 }
 
 function removeFromCart(item) {
-  for (var item in cart) {
-    if (cart.hasOwnProperty(item)) {
-      cart = cart.delete[item]
-      console.log(`${cart}`)
-    } else {
-      console.log("That item is not in your cart.")
-      return cart
+  for (var i = 0; i < cart.length; i++) {
+    if (cart[i].hasOwnProperty(item)) {
+      cart.splice(i, 1)
+      return cart;
     }
   }
+  console.log("That item is not in your cart.")
 }
 
 function placeOrder(cardNumber) {
