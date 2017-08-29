@@ -19,16 +19,26 @@ function addToCart(item) {
 }
 
 function viewCart() {
-  const yourCart = ['In your cart, you have']
-  for (var i = 0; i < cart.length; i++) {
-    new object1 = cart[i]
-    var keys = Object.keys(object1)
-    var values = object1[keys[i]]}
-    for (var i = 0; i < cart.length; i++) {
-      yourCart.push(` ${keys[i]} at ${values[i]},`)
-    } for (var i = cart.length; i = cart.length; i++) {
-      yourCart.push(` and ${keys[i]} at ${values[i]}.`)
-    } return youCart
+  if (cart.length === 0) {console.log ('Your shopping cart is empty.')}
+  else {
+  var yourCart = 'In your cart, you have '
+  var array1 = []
+  cart.forEach ((itemObject, index) => {
+    var keys = Object.keys(itemObject)[0]
+    var values = itemObject[keys]
+    array1.push(`${keys} at $${values}`)});
+  if (cart.length === 1) {
+    yourCart += array1.join() + "."
+    console.log(yourCart);
+  } else if (cart.length === 2) {
+    yourCart += array1.join(' and ') + "."
+    console.log(yourCart);
+  } else {
+    var array2 = array1.splice(-1, 1)
+    yourCart += array1.join (', ')
+  } console.log(`${yourCart}, and ${array2}.`);
+  }
+}
 
 
 
