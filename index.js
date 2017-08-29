@@ -43,11 +43,12 @@ function viewCart() {
 
 
 function total() {
-cart.forEach ((itemObject, index) => {
-  var keys2 = Object.keys(itemObject)[0]
-  var price = itemObject[keys]});
-  var sum = price.reduce((a, b) => a + b, 0);
-  console.log(sum);
+  var total = 0;
+  for (var i = 0; i < cart.length; i++) {
+    var price = Object.keys(cart[i])[0]
+    total += cart[i][price]
+  }
+  return total;
 }
 
 function removeFromCart(item) {
