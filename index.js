@@ -47,7 +47,7 @@ cart.forEach ((itemObject, index) => {
   var keys2 = Object.keys(cart)[0]
   var price = itemObject[keys]})
   var sum = price.reduce((a, b) => a + b, 0);
-  console.log(sum);  
+  console.log(sum);
 }
 
 function removeFromCart(item) {
