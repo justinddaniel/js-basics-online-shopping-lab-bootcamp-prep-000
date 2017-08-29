@@ -43,7 +43,10 @@ function viewCart() {
 
 
 function total() {
-  // write your code here
+var keys2 = Object.keys(cart)
+var price = keys2[keys]
+var sum = price.reduce((a, b) => a + b, 0);
+console.log(sum);
 }
 
 function removeFromCart(item) {
